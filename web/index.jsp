@@ -72,7 +72,7 @@
 
 
 <div class="navbar-collapse collapse">
-            <form  action="ControlNoticiasServlet" method="POST" class="navbar-form navbar-right">
+    <form  action="ControlNoticiasServlet" method="POST" class="navbar-form navbar-right">
           
               <div class="form-group">
                <input type="text" class="form-control" name="usuario" placeholder="Nombre de Usuario" required autofocus>

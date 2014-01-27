@@ -5,7 +5,7 @@
  */
 
 package noticiasPackage;
-
+import noticiasPackage.CheckLoginBean;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author pc
  */
 public class ControlNoticiasServlet extends HttpServlet {
+    private Object CheckLoginBean;
    
 
     /**
@@ -30,15 +31,15 @@ public class ControlNoticiasServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        
         CheckLoginBean login = new CheckLoginBean();
         login.setUsuario(request.getParameter("usuario"));
         login.setPass(request.getParameter("pass"));
         
-        
-        
-     
-            request.setAttribute("login", login);
-           request.getRequestDispatcher("contenidoFull.jsp").forward(request, response);
+            request.setAttribute("CheckLoginBean", login);
+          
+           request.getRequestDispatcher("contenidofull.jsp").forward(request, response);
       
         
         

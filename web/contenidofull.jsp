@@ -15,11 +15,11 @@
         <h1>contenido completo !</h1>
         
         
-        <p> 
+        <p> <jsp:getProperty name="CheckLoginBean" property="usuario" />
+            <jsp:getProperty name="CheckLoginBean" property="pass" />
+            
              <jsp:useBean id="CheckLoginBean" scope="request" class="noticiasPackage.CheckLoginBean" />
         
-        <jsp:getProperty name="CheckLoginBean" property="usuario" />
-        <jsp:getProperty name="CheckLoginBean" property="pass" /></p>
        
         
     </body>

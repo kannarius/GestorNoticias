@@ -31,7 +31,8 @@ public class CheckLoginBean {
         
         
     }
-    public void setPass(String usuario){
+    public void setPass(String pass){
+
         this.pass=pass;
         
     }
