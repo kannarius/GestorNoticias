@@ -12,15 +12,28 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>contenido completo !</h1>
         
-        
-        <p> <jsp:getProperty name="CheckLoginBean" property="usuario" />
-            <jsp:getProperty name="CheckLoginBean" property="pass" />
-            
              <jsp:useBean id="CheckLoginBean" scope="request" class="noticiasPackage.CheckLoginBean" />
         
-       
+             <table border="0">
+                 
+                 <tbody>
+                     <tr>
+                         <td><h1>Login Correcto<br>Mostramos todo el contenido.</h1>
+        </td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td> Usuario y pass :</td>
+                         <td><jsp:getProperty name="CheckLoginBean" property="usuario" />
+                 <jsp:getProperty name="CheckLoginBean" property="pass" />
+            </td>
+                     </tr>
+                 </tbody>
+             </table>
+
+        
+             <p> 
         
     </body>
 </html>
